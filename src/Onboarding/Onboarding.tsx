@@ -1,6 +1,6 @@
 import { View, Text, Dimensions, Image, SafeAreaView, StatusBar, FlatList, TouchableOpacity, } from 'react-native'
 import React, { useState, useRef } from 'react'
-import stayle from './stayle';
+import stayle from './onboardingcss';
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('window');
 const colors = { primary: '#282534', white: '#ED1B24' };
@@ -18,26 +18,24 @@ const imges = [
     {
         id: 3,
         imge: require('../asset/imge/5.jpg'),
-        title: 'Lets get started with',
-        subtitle: 'Banking made convenient with we Bank '
+        title: 'Create profiles for diffrent members & get personalised recommendations',
     },
 
     {
         id: 4,
         imge: require('../asset/imge/6.jpg'),
-        title: 'Create profiles for diffrent members & get personalised recommendations',
+        title: 'Plans according to your needs at affordable prices',
     },
 
     {
         id: 5,
         imge: require('../asset/imge/7.jpg'),
-        title: 'Plans according to your needs at affordable prices',
+        title: 'Let’s Get Started !!!',
     },
 
     {
         id: 6,
         imge: require('../asset/imge/8.jpg'),
-        title: 'Let’s Get Started !!!',
     },
 
 ]
@@ -51,7 +49,7 @@ const Slide = ({ item }: any) => {
                 style={{ height: '100%', width, marginTop: -10, resizeMode: 'contain' }}
             />
             <LinearGradient
-                colors={['transparent', 'rgba(0,0,0,100)']}
+                colors={['transparent', 'rgba(0,0,0,10000)']}
                 style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 150 }}
             />
             <View style={{ position: 'absolute', zIndex: 105, marginTop:-150 }} >
@@ -93,13 +91,13 @@ const Onboarding = ({ navigation }: any) => {
                 style={{
                     height: height * 0.25,
                     justifyContent: 'space-between',
-                    paddingHorizontal: 20,
+                    paddingHorizontal: 30,
                 }}>
                 <View
                     style={{
                         flexDirection: 'row',
                         justifyContent: 'center',
-                        marginTop: 20,
+                        // marginTop: 20,
                         zIndex:110,
                     }}>
                     {imges.map((_, index) => (
@@ -118,14 +116,26 @@ const Onboarding = ({ navigation }: any) => {
                 </View>
                 <View style={{ marginBottom: 20, }}>
                     {currentSlideIndex == imges.length - 1 ? (
-                        <View style={{ height: 50, }}>
+                        <View style={{ height: 130, }}>
                             <TouchableOpacity
-                                style={[stayle.btn, {
-                                    backgroundColor: '#2567F9',
+                                style={[stayle.btn1, {
+                                    backgroundColor: '#ED1B24',
+                                    marginBottom:20,
                                 }]}
-                                onPress={() => navigation.navigate('HomeScreen')}>
+                                onPress={() => navigation.navigate('LoginRegisterScreen', { screen: 'Singup' })}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15, color: '#FFFFFF' }}>
-                                    Başla
+                                    Singup
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={[stayle.btn1, {
+                                    borderWidth:2,
+                                    borderColor:'#ED1B24',
+                                    backgroundColor:'black',
+                                }]}
+                                onPress={() => navigation.navigate('LoginRegisterScreen', { screen: 'Login' })}>
+                                <Text style={{ fontWeight: 'bold', fontSize: 15, color: '#FFFFFF'}}>
+                                    Login
                                 </Text>
                             </TouchableOpacity>
                         </View>
@@ -139,7 +149,7 @@ const Onboarding = ({ navigation }: any) => {
                                 <Text
                                     style={{
                                         fontWeight: 'bold',
-                                        fontSize: 15,
+                                        fontSize: 20,
                                         color: '#FFFFFF'
                                     }}>
                                     Continue
@@ -150,7 +160,7 @@ const Onboarding = ({ navigation }: any) => {
                 </View>
             </View>
         );
-    };
+    }; 
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>

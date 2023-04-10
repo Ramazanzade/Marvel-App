@@ -46,11 +46,20 @@ export default StyleSheet.create({
   },
   btn: {
     flex: 1,
-    height: 50,
-    borderRadius: 9,
+    height: 60,
+    // borderRadius: 9,
     backgroundColor: '#ED1B24',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom:50
+  },
+  btn1: {
+    height: 60,
+    // borderRadius: 9,
+    backgroundColor: '#ED1B24',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom:70
   },
   skip: {
     fontWeight: 'bold',
