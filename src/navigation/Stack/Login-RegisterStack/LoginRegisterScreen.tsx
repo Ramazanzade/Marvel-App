@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 const LoginRegisterScreen = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} >
-            <Stack.Screen name="Login" component={Login} />
+            {/* <Stack.Screen name="Login" component={Login} /> */}
             <Stack.Screen name="Singup" component={Singup} />
         </Stack.Navigator>
     )

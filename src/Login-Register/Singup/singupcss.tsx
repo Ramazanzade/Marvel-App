@@ -40,17 +40,71 @@ export default StyleSheet.create({
     },
     text2: {
         color: 'gray',
-        fontSize:20
+        fontSize: 20
     },
     text1: {
         color: '#FFFFFF',
-        fontSize:30,
-        marginTop:'5%'
+        fontSize: 25,
+        marginTop: '5%'
     },
     textbig: {
         alignItems: 'center',
+        marginTop: '5%'
+    },
+    touchview: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginTop: '8%'
+    },
+    toucicon: {
+        backgroundColor: '#FFFFFF',
+        width: 135,
+        height: 60,
+        flexDirection: 'row',
+
+    },
+    text3: {
+        textAlign: 'center',
+        marginTop: '15%',
+        fontWeight: '700',
+        color: 'black',
+        fontSize: 15,
+
+    },
+    icon: {
+        marginTop: '5%',
+        margin: 5,
+        color: '#0163E0',
+    },
+    icon1: {
+        marginTop: '5%',
+        margin: 5,
+        color: '#EB4335',
+
+    },
+    text4: {
+        color: 'gray',
+        marginRight: 10,
+        fontSize: 15
+    },
+    text5: {
+        color: 'red',
+        fontSize: 17
+    },
+    fouter: {
+        flexDirection: 'row',
+        alignSelf: 'center',
+        marginTop: '10%'
+    },
+    icon2:{
+        // color:'#FFFFFF'
+        color:'gray'
+    },
+    toggle:{
+        position:'absolute',
+        zIndex:200,
+        marginLeft:'85%',
         marginTop:'5%'
     }
-
 
 })
