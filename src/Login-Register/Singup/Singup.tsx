@@ -5,15 +5,49 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 const Singup = ({ navigation }: any) => {
-    const [email, setemail] = useState('')
-    const [password, setpassword] = useState('')
+    const [email, setemail] = useState<any>('')
+    const [password, setpassword] = useState<any>('')
+      const [emailerror, setemailerror] = useState(false)
+    const [passworderror, setpassworderror] = useState(false);
     const [hideNumbers, setHideNumbers] = useState(false);
     const [hideText, setHideText] = useState(true);
-
+    const [isLoading, setIsLoading] = useState(false);
     const handleToggleHideNumbers = () => {
         setHideNumbers(!hideNumbers);
         setHideText(!hideText);
     };
+    const handlePasswordChange = (text: string) => {
+        setpassword(text);
+        setpassworderror(text.trim() === '')
+    };
+    const handleEmailChange = (text: string) => {
+        setemail(text);
+        setemailerror(text.trim() === '' || !/\S+@\S+\.\S+/.test(text))
+    };
+
+
+    const errors = () => {
+        if (emailerror == email || passworderror == password) {
+            setpassworderror(true)
+            setemailerror(true)
+        } else {
+        }
+    }
+
+    const Singup = () => {
+        errors()
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 3000);
+        navigation.navigate('LoginRegisterScreen', { screen: 'Singup' })
+
+    }
+const login = ()=>{
+    navigation.navigate('Login')
+    console.log('salam');
+    
+}
     return (
         <View style={singupcss.view}>
             <View style={singupcss.imgview}>
@@ -24,8 +58,8 @@ const Singup = ({ navigation }: any) => {
             </View>
             <View>
                 <TextInput
-                    style={[singupcss.input, { marginBottom: 20 }]}
-                    onChangeText={setemail}
+                    style={[singupcss.input, { marginBottom: 20 }, emailerror && singupcss.errorInput]}
+                    onChangeText={handleEmailChange}
                     value={email}
                     placeholder="Enter your Email ID"
                     placeholderTextColor="gray"
@@ -38,8 +72,8 @@ const Singup = ({ navigation }: any) => {
                         }
                     </TouchableOpacity>
                     <TextInput
-                        style={singupcss.input}
-                        onChangeText={setpassword}
+                        style={[singupcss.input, passworderror && singupcss.errorInput]}
+                        onChangeText={handlePasswordChange}
                         value={hideText ? password.replace(/./g, '*') : password}
                         placeholder="Password"
                         placeholderTextColor="gray"
@@ -47,7 +81,7 @@ const Singup = ({ navigation }: any) => {
                 </View>
                 <TouchableOpacity
                     style={singupcss.touc}
-                    onPress={() => navigation.navigate('LoginRegisterScreen', { screen: 'Singup' })}>
+                    onPress={() => Singup}>
                     <Text style={singupcss.text}>
                         Singup
                     </Text>
@@ -77,7 +111,7 @@ const Singup = ({ navigation }: any) => {
             </View>
             <View style={singupcss.fouter}>
                 <Text style={singupcss.text4}>Already have an account?</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                <TouchableOpacity onPress={() => login()}>
                     <Text style={singupcss.text5}>Login</Text>
                 </TouchableOpacity>
             </View>

@@ -11,6 +11,7 @@ export default StyleSheet.create({
         marginLeft: '5%',
         textAlign: 'left',
         paddingLeft: 30,
+        borderWidth:2
     },
     img: {
         width: 600,
@@ -97,7 +98,6 @@ export default StyleSheet.create({
         marginTop: '10%'
     },
     icon2:{
-        // color:'#FFFFFF'
         color:'gray'
     },
     toggle:{
@@ -105,6 +105,9 @@ export default StyleSheet.create({
         zIndex:200,
         marginLeft:'85%',
         marginTop:'5%'
-    }
+    },
+    errorInput: {
+        borderColor: 'red'
+      },
 
 })
