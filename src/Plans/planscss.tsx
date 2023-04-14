@@ -64,7 +64,7 @@ export default StyleSheet.create({
         width: '90%',
         marginHorizontal: '5%',
         marginTop: '5%',
-        paddingVertical:'5%'
+        paddingVertical: '5%'
     },
     text3: {
         color: '#FFFFFF',
@@ -84,19 +84,56 @@ export default StyleSheet.create({
     viewseri: {
         marginTop: '2%'
     },
-    buton:{
-marginTop:'10%'
+    buton: {
+        marginTop: '10%'
     },
-    touc:{
-borderWidth:2,
-borderColor:'red',
-width:'70%',
-alignSelf:'center',
-padding:'3%'
+    touc: {
+        borderWidth: 2,
+        borderColor: 'red',
+        width: '70%',
+        alignSelf: 'center',
+        padding: '3%'
     },
-    text5:{
-        color:'#FFFFFF',
-        textAlign:'center',
+    text5: {
+        color: '#FFFFFF',
+        textAlign: 'center',
+        fontSize: 20
+    },
+    text6: {
+        color: '#FFFFFF',
+        fontSize: 30,
+        alignSelf: 'center',
+        marginLeft: '15%',
+
+    },
+    text7: {
+        color: '#FFFFFF',
+        fontSize: 30,
+        alignSelf: 'center',
+        marginLeft: '25%',
+    },
+    touch: {
+        alignSelf: 'center',
+        flexDirection: 'row',
+        marginTop: '10%'
+    },
+    text8: {
+        color: '#FFFFFF',
+        fontSize: 15,
+        marginRight: 20
+    },
+    text9: {
+        color: 'red',
+        fontSize: 15
+    },
+    textimput:{
+        backgroundColor:'#FFFFFF',
+        width:'92%',
+        marginLeft:'4%',
+        marginTop:'5%',
+        padding:'4%',
+        textAlign:'left',
+        paddingLeft:'3%',
         fontSize:20
     }
 })

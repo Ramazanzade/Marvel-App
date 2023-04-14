@@ -2,16 +2,16 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import planscss from './planscss'
 
-const PalnsPage1 = () => {
-    const [backgroundColors, setBackgroundColors] = useState(['']);
-    const [cevreColor, setCevreColor] = useState('#000');
+const PalnsPage1 = ({navigation}:any) => {
+    const [backgroundColors, setBackgroundColors] = useState(['', '' , ' ']);
+    const [cevreColor, setCevreColor] = useState('#700806');
 
     const handleTouch = (index: any) => {
         const updatedBackgroundColors = backgroundColors.map((color, i) => {
             if (i === index) {
               return 'red';
             } else {
-              return '';
+              return 'black';
             }
           });
         setBackgroundColors(updatedBackgroundColors);
@@ -59,16 +59,10 @@ const PalnsPage1 = () => {
                 </TouchableOpacity>
             </View>
             <View style={planscss.buton}>
-                <TouchableOpacity style={planscss.touc}>
+                <TouchableOpacity style={planscss.touc} onPress={()=>navigation.navigate('PlansPage2') }>
                     <Text style={planscss.text5}> Continue </Text>
                 </TouchableOpacity>
             </View>
-
-
-
-
-
-
         </View >
     )
 }
