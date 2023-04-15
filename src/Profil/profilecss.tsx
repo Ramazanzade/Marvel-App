@@ -9,7 +9,7 @@ export default StyleSheet.create({
     },
     img: {
         width: 500,
-        height: 300,
+        height: 250,
         marginTop: '-30%'
     },
     textview: {
@@ -20,14 +20,45 @@ export default StyleSheet.create({
         fontSize: 30
     },
     avatar:{
-        width:150,
-        height:150,
-        borderRadius:80,
-        borderWidth:3,
+        width:120,
+        height:120,
+        borderRadius:70,
+        borderWidth:1,
         borderColor:'gray',
     },
     avatarview:{
        flexDirection:'row',
-       justifyContent:'space-around'
-    }
+       justifyContent:'space-evenly',
+       marginTop:'2%'
+    },
+    buton: {
+        marginTop: '10%'
+    },
+    touc: {
+        borderWidth: 2,
+        borderColor: 'red',
+        width: '70%',
+        alignSelf: 'center',
+        padding: '3%'
+    },
+    text5: {
+        color: '#FFFFFF',
+        textAlign: 'center',
+        fontSize: 20
+    },
+    selectedAvatar: {
+        borderColor: 'red',
+        width:120,
+        height:125,
+        borderRadius:60,
+        borderBottomWidth:10,
+        borderRightWidth:10,
+      },
+      avatarsContainer: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        marginTop: 20,
+      },
+      
 })

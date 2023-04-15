@@ -1,8 +1,31 @@
 import { View, Image, Text , TouchableOpacity} from 'react-native'
-import React from 'react'
+import React , {useState} from 'react'
 import profilecss from './profilecss'
 
-const ProfilePage1 = () => {
+const ProfilePage1 = ({navigation}:any) => {
+    const [selectedAvatar, setSelectedAvatar] = useState(-1);
+
+    const handleAvatarPress = (index: number) => {
+      setSelectedAvatar(index);
+    };
+  
+    const renderAvatar = (source: any, index: number) => {
+      return (
+        <TouchableOpacity
+          key={index}
+          onPress={() => handleAvatarPress(index)}
+          style={[
+            profilecss.avatarview,
+            selectedAvatar === index && profilecss.selectedAvatar,
+            index % 2 !== 0 && { marginLeft: '13%', marginTop:'3%'},
+            { flexDirection: 'row' }
+          ]}
+        >
+          <Image style={profilecss.avatar} source={source} />
+        </TouchableOpacity>
+      );
+    };
+  
     return (
         <View style={profilecss.container}>
             <View style={profilecss.imgview}>
@@ -14,18 +37,21 @@ const ProfilePage1 = () => {
             <View style={profilecss.textview}>
                 <Text style={profilecss.text}>Choose your Avatar</Text>
             </View>
-            <View style={profilecss.avatarview}>
-                <TouchableOpacity>
-                <Image
-                    style={profilecss.avatar}
-                    source={require('../asset/imge/avatar1.jpg')}
-                />
-                </TouchableOpacity>
-                <TouchableOpacity>
-                <Image
-                    style={profilecss.avatar}
-                    source={require('../asset/imge/avatar2.jpg')}
-                />
+            <View style={profilecss.avatarsContainer}>
+        {[
+          require('../asset/imge/avatar1.jpg'),
+          require('../asset/imge/avatar2.jpg'),
+          require('../asset/imge/avatar3.jpg'),
+          require('../asset/imge/avatar4.jpg'),
+          require('../asset/imge/avatar5.jpg'),
+          require('../asset/imge/avatar6.jpg'),
+          require('../asset/imge/avatar7.jpg'),
+          require('../asset/imge/avatar8.jpg'),
+        ].map(renderAvatar)}
+      </View>
+           <View style={profilecss.buton}>
+                <TouchableOpacity style={[profilecss.touc, {marginTop:'-5%'}]} onPress={() => navigation.navigate('ProfilePage2')}>
+                    <Text style={profilecss.text5}> Looks Good </Text>
                 </TouchableOpacity>
             </View>
 
