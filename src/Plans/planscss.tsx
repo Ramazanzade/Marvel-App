@@ -126,14 +126,50 @@ export default StyleSheet.create({
         color: 'red',
         fontSize: 15
     },
-    textimput:{
-        backgroundColor:'#FFFFFF',
-        width:'92%',
-        marginLeft:'4%',
-        marginTop:'5%',
-        padding:'4%',
-        textAlign:'left',
-        paddingLeft:'3%',
-        fontSize:20
+    textimput: {
+        backgroundColor: '#FFFFFF',
+        width: '92%',
+        marginLeft: '4%',
+        marginTop: '5%',
+        padding: '4%',
+        textAlign: 'left',
+        paddingLeft: '3%',
+        fontSize: 20
+    },
+    icon: {
+        color: 'gray',
+    },
+    iconview: {
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
+    icon2: {
+        zIndex: 1,
+        position: 'absolute',
+        marginLeft: '80%',
+    },
+    loading: {
+        width: 25,
+        height: 25,
+        borderRadius: 50,
+        backgroundColor: '#FFFFFF'
+    },
+    loadingview: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginHorizontal: '10%',
+        marginTop: '20%'
+    },
+    ticketview:{
+width:150,
+height:150,
+borderRadius:100,
+backgroundColor:'red',
+alignSelf:'center',
+marginTop:'15%'
+    },
+    icon4:{
+alignSelf:'center',
+marginTop:'15%'
     }
 })

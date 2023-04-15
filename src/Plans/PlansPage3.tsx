@@ -1,6 +1,8 @@
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native'
 import React, { useState } from 'react'
 import planscss from './planscss'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 
 const PlansPage3 = ({ navigation }: any) => {
   const [backgroundColors, setBackgroundColors] = useState(['', '', ' ']);
@@ -45,7 +47,7 @@ const PlansPage3 = ({ navigation }: any) => {
         />
       </View>
       <View style={planscss.textview}>
-        <Text style={planscss.text1}>Choose how to pay</Text>
+        <Text style={[planscss.text1,{fontSize:20, marginHorizontal:'10%'}]}>Fill your Credit / Debit Card Details</Text>
       </View>
       <TextInput
         style={planscss.textimput}
@@ -75,6 +77,7 @@ const PlansPage3 = ({ navigation }: any) => {
         placeholder="Expiration Date (MM/YY)"
         placeholderTextColor="gray"
       />
+
       <TextInput
         style={planscss.textimput}
         onChangeText={setsecurity}
@@ -82,14 +85,14 @@ const PlansPage3 = ({ navigation }: any) => {
         placeholder="Security Code (CVV)"
         placeholderTextColor="gray"
       />
-      <View style={[planscss.touch, {marginTop:'7%'}]}>
+      <View style={[planscss.touch, { marginTop: '7%' }]}>
         <Text style={planscss.text8}>Movies & Series $20/month </Text>
         <TouchableOpacity onPress={() => navigation.navigate('PalnsPage1')}>
           <Text style={planscss.text9}>Change</Text>
         </TouchableOpacity>
       </View>
       <View style={planscss.buton}>
-        <TouchableOpacity style={[planscss.touc, { marginTop: "1%" }]} onPress={() => navigation.navigate('PlansPage3')}>
+        <TouchableOpacity style={[planscss.touc, { marginTop: "1%" }]} onPress={() => navigation.navigate('PlansPage4')}>
           <Text style={planscss.text5}> Continue </Text>
         </TouchableOpacity>
       </View>

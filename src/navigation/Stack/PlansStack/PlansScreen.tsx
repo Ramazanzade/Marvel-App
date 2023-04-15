@@ -5,6 +5,7 @@ import PalnsPage1 from '../../../Plans/PalnsPage1';
 import PlansPage2 from '../../../Plans/PlansPage2';
 import PlansPage3 from '../../../Plans/PlansPage3';
 import PlansPage4 from '../../../Plans/PlansPage4';
+import PlansPage5 from '../../../Plans/PlansPage5';
 const Stack = createNativeStackNavigator();
 const PlansScreen = () => {
   return (
@@ -13,6 +14,7 @@ const PlansScreen = () => {
     <Stack.Screen name="PlansPage2" component={PlansPage2} />
     <Stack.Screen name="PlansPage3" component={PlansPage3} />
     <Stack.Screen name="PlansPage4" component={PlansPage4} />
+    <Stack.Screen name="PlansPage5" component={PlansPage5} />
 </Stack.Navigator>
   )
 }

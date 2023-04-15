@@ -7,6 +7,7 @@ import HomeScreen from './src/navigation/Stack/HomeStack/HomeScreen';
 import OnboardingScreen from './src/navigation/Stack/OnboardingStack/OnboardingScreen';
 import LoginRegisterScreen from './src/navigation/Stack/Login-RegisterStack/LoginRegisterScreen';
 import PlansScreen from './src/navigation/Stack/PlansStack/PlansScreen';
+import ProfileScreen from './src/navigation/Stack/ProfileStack/ProfileScreen';
 const Stack = createNativeStackNavigator();
 const App = () => {
 
@@ -16,7 +17,9 @@ const App = () => {
       {/* <Stack.Screen name="SplashScreen" component={SplashScreen}/> */}
         {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen}/> */}
         {/* <Stack.Screen name="LoginRegisterScreen" component={LoginRegisterScreen}/> */}
-        <Stack.Screen name="PlansScreen" component={PlansScreen}/>
+        {/* <Stack.Screen name="PlansScreen" component={PlansScreen}/> */}
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
+
 
       </Stack.Navigator>
     </NavigationContainer>
