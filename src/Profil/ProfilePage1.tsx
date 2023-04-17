@@ -3,20 +3,20 @@ import React , {useState} from 'react'
 import profilecss from './profilecss'
 
 const ProfilePage1 = ({navigation}:any) => {
-    const [selectedAvatar, setSelectedAvatar] = useState(-1);
+    const [selectedAvatar, setSelectedAvatar] = useState(null);
 
-    const handleAvatarPress = (index: number) => {
-      setSelectedAvatar(index);
+    const handleAvatarPress = (imageSource: any) => {
+      setSelectedAvatar(imageSource);
     };
   
     const renderAvatar = (source: any, index: number) => {
       return (
         <TouchableOpacity
           key={index}
-          onPress={() => handleAvatarPress(index)}
+          onPress={() => handleAvatarPress(source)}
           style={[
             profilecss.avatarview,
-            selectedAvatar === index && profilecss.selectedAvatar,
+            selectedAvatar === source && profilecss.selectedAvatar,
             index % 2 !== 0 && { marginLeft: '13%', marginTop:'3%'},
             { flexDirection: 'row' }
           ]}
@@ -50,7 +50,8 @@ const ProfilePage1 = ({navigation}:any) => {
         ].map(renderAvatar)}
       </View>
            <View style={profilecss.buton}>
-                <TouchableOpacity style={[profilecss.touc, {marginTop:'-5%'}]} onPress={() => navigation.navigate('ProfilePage2')}>
+                <TouchableOpacity style={[profilecss.touc, {marginTop:'-5%'}]} onPress={()=>{
+                  navigation.navigate('ProfilPage2', { selectedAvatarImage: selectedAvatar })                }}>
                     <Text style={profilecss.text5}> Looks Good </Text>
                 </TouchableOpacity>
             </View>
