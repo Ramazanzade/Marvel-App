@@ -1,6 +1,7 @@
 import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import homecss from './homecss'
+import Tabbar from '../navigation/Tab/Tabbar';
 
 const Home = () => {
   const DATA = [
@@ -98,7 +99,7 @@ const Home = () => {
           contentContainerStyle={{ flexGrow: 1 }}
         />
       </View>
-
+{/* <Tabbar></Tabbar> */}
 
 
 

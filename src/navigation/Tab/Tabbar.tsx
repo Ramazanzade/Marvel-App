@@ -44,7 +44,7 @@ const Tabbar = ({ route }: any) => {
         }}
         name="HomeScreen" component={HomeScreen}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         options={{
           tabBarIcon: ({ color, size, focused }:any) => <FontAwesomeIcon icon={faChartArea} style={tabbarcss.tabIcon} size={25} />,
           tabBarShowLabel: false,
@@ -71,7 +71,7 @@ const Tabbar = ({ route }: any) => {
           tabBarShowLabel: false,
         }}
         name="HomeScreen" component={HomeScreen}
-      />
+      /> */}
     </Tab.Navigator>
   )
 }
