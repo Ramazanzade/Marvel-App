@@ -29,10 +29,10 @@ const ProfilePage1 = ({navigation}:any) => {
     return (
         <View style={profilecss.container}>
             <View style={profilecss.imgview}>
-                <Image
-                    style={profilecss.img}
-                    source={require('../asset/imge/2.png')}
-                />
+                  <Image
+                      style={profilecss.img}
+                      source={require('../asset/imge/2.png')}
+                  />
             </View>
             <View style={profilecss.textview}>
                 <Text style={profilecss.text}>Choose your Avatar</Text>
