@@ -56,7 +56,7 @@ const PlansPage5 = ({ navigation }: any) => {
                 </View>
             </View>
             <View style={planscss.buton}>
-                <TouchableOpacity style={[planscss.touc, { marginTop: "30%" , backgroundColor:'red'}]} onPress={() => navigation.navigate('ProfileScreen', { screen: 'ProfilePage1' })}>
+                <TouchableOpacity style={[planscss.touc, { marginTop: "30%" , backgroundColor:'red'}]} onPress={() => navigation.navigate('HomeScreen', { screen: 'Home' })}>
                     <Text style={planscss.text5}> Continue </Text>
                 </TouchableOpacity>
             </View>

@@ -45,7 +45,7 @@ const Login = ({navigation}:any) => {
 
   }
 const Singup = ()=>{
-  navigation.navigate('Login')
+  navigation.navigate('Singup')
   console.log('salam');
   
 }

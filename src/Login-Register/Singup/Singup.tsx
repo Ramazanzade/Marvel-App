@@ -7,7 +7,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 const Singup = ({ navigation }: any) => {
     const [email, setemail] = useState<any>('')
     const [password, setpassword] = useState<any>('')
-      const [emailerror, setemailerror] = useState(false)
+    const [emailerror, setemailerror] = useState(false)
     const [passworderror, setpassworderror] = useState(false);
     const [hideNumbers, setHideNumbers] = useState(false);
     const [hideText, setHideText] = useState(true);
@@ -35,19 +35,21 @@ const Singup = ({ navigation }: any) => {
     }
 
     const Singup = () => {
+        console.log('ahjs');
+        
         errors()
         setIsLoading(true);
         setTimeout(() => {
             setIsLoading(false);
         }, 3000);
-        navigation.navigate('LoginRegisterScreen', { screen: 'Singup' })
+        navigation.navigate('PlansScreen', { screen: 'PalnsPage1' })
+        
+    }
+    const login = () => {
+        navigation.navigate('Login')
+        console.log('salam');
 
     }
-const login = ()=>{
-    navigation.navigate('Login')
-    console.log('salam');
-    
-}
     return (
         <View style={singupcss.view}>
             <View style={singupcss.imgview}>
@@ -81,7 +83,7 @@ const login = ()=>{
                 </View>
                 <TouchableOpacity
                     style={singupcss.touc}
-                    onPress={() => Singup}>
+                    onPress={() => Singup()}>
                     <Text style={singupcss.text}>
                         Singup
                     </Text>

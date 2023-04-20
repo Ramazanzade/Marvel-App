@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity, Button } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import planscss from './planscss'
-const DEFAULT_DELAY = 500;
+const DEFAULT_DELAY = 100;
 
 const PlansPage4 = ({ navigation }: any) => {
   const [backgroundColors, setBackgroundColors] = useState(['', '', ' ']);
