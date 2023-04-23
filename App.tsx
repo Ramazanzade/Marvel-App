@@ -19,8 +19,8 @@ const App = () => {
         {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen}/>
         <Stack.Screen name="LoginRegisterScreen" component={LoginRegisterScreen}/>
         <Stack.Screen name="PlansScreen" component={PlansScreen}/> */}
-        <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
-        <Stack.Screen name="HomeScreen" component={HomeScreen}/>
+        {/* <Stack.Screen name="ProfileScreen" component={ProfileScreen}/> */}
+        {/* <Stack.Screen name="HomeScreen" component={HomeScreen}/> */}
         {/* <Stack.Screen name="Tabbar" component={Tabbar}/> */}
       </Stack.Navigator>
     </NavigationContainer>
