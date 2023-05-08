@@ -85,7 +85,7 @@ const Singup = ({ navigation }: any) => {
                     style={singupcss.touc}
                     onPress={() => Singup()}>
                     <Text style={singupcss.text}>
-                        Singup
+                    Sign Up
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -114,7 +114,7 @@ const Singup = ({ navigation }: any) => {
             <View style={singupcss.fouter}>
                 <Text style={singupcss.text4}>Already have an account?</Text>
                 <TouchableOpacity onPress={() => login()}>
-                    <Text style={singupcss.text5}>Login</Text>
+                    <Text style={singupcss.text5}>Login in</Text>
                 </TouchableOpacity>
             </View>
         </View>
