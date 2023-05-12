@@ -32,7 +32,7 @@ const ProfilePage5 = ({ navigation, route, index }: any) => {
                 <Text style={profilecss.username1}>{username}:nsjada</Text>
             </View>
             <View style={profilecss.buton}>
-                <TouchableOpacity style={[profilecss.touc, { marginTop: '20%' }]} onPress={() => navigation.navigate('ProfilePage3', {
+                <TouchableOpacity style={[profilecss.touc, { marginTop: '20%' }]} onPress={() => navigation.navigate('HomeScreen', {
                     selectedAvatarImage: selectedAvatarImage,
                     selectedAvatarIndex: index,
                     username: username

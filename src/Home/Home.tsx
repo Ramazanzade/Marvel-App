@@ -99,7 +99,6 @@ const Home = () => {
           contentContainerStyle={{ flexGrow: 1 }}
         />
       </View>
-{/* <Tabbar></Tabbar> */}
 
 
 

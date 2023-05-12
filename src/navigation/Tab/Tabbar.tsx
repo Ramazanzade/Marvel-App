@@ -7,6 +7,8 @@ import Home from '../../Home/Home';
 import Onboarding from '../../Onboarding/Onboarding';
 import PlansPage2 from '../../Plans/PlansPage2';
 import HomeScreen from '../Stack/HomeStack/HomeScreen';
+import ProfileScreen from '../Stack/ProfileStack/ProfileScreen';
+import DownloadScreen from '../Stack/DownloadStack/DownloadScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -19,7 +21,7 @@ const Tabbar = ({ route }: any) => {
     screenOptions={{
       headerShown: false,
       tabBarStyle: {
-        backgroundColor: '#121433',
+        backgroundColor: 'red',
         height: 60,
         shadowColor: '#121433',
         shadowOffset: {
@@ -44,34 +46,15 @@ const Tabbar = ({ route }: any) => {
         }}
         name="HomeScreen" component={HomeScreen}
       />
-      {/* <Tab.Screen
+       <Tab.Screen
         options={{
-          tabBarIcon: ({ color, size, focused }:any) => <FontAwesomeIcon icon={faChartArea} style={tabbarcss.tabIcon} size={25} />,
+          tabBarIcon: ({ color, size, focused }:any) => <FontAwesomeIcon icon={faHome} style={tabbarcss.tabIcon} size={25} />,
           tabBarShowLabel: false,
         }}
-        name="HomeScreen" component={HomeScreen}
+        name="DownloadScreen" component={DownloadScreen}
       />
-      <Tab.Screen
-        options={{
-          tabBarIcon: ({ color, size, focused }:any) => <FontAwesomeIcon icon={faPlus} style={tabbarcss.middleIcon} size={15} />,
-          tabBarShowLabel: false,
-        }}
-        name="HomeScreen" component={HomeScreen}
-      />
-      <Tab.Screen
-        options={{
-          tabBarIcon: ({ color, size, focused }:any) => <FontAwesomeIcon icon={faChartBar} style={tabbarcss.tabIcon} size={25} />,
-          tabBarShowLabel: false,
-        }}
-        name="HomeScreen" component={HomeScreen}
-      />
-      <Tab.Screen
-        options={{
-          tabBarIcon: ({ color, size, focused }:any) => <FontAwesomeIcon icon={faUser} style={tabbarcss.tabIcon} size={25} />,
-          tabBarShowLabel: false,
-        }}
-        name="HomeScreen" component={HomeScreen}
-      /> */}
+      
+
     </Tab.Navigator>
   )
 }
