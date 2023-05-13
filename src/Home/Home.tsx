@@ -3,7 +3,7 @@ import React from 'react'
 import homecss from './homecss'
 import Tabbar from '../navigation/Tab/Tabbar';
 
-const Home = () => {
+const Home = ({navigation}:any) => {
   const DATA = [
     { id: 0, img: { uri: 'https://parade.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTgxMjkxNjk3NDQ4ODI4/marveldisney.jpg' } },
     { id: 1, img: { uri: 'https://www.lifehacker.com.au/wp-content/uploads/sites/4/2022/11/09/marvel-movies-watch-runtime.jpg?quality=80&resize=1280,720' } },
@@ -11,7 +11,7 @@ const Home = () => {
   ];
   const render1 = ({item}:any) => {
   return(
-    <TouchableOpacity style={homecss.movieimgview}> 
+    <TouchableOpacity style={homecss.movieimgview} onPress={()=>  navigation.navigate('Download') }> 
     <Image
       style={homecss.movieimg}
       source={item.img}
