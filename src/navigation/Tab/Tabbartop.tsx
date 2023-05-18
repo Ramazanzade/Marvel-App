@@ -8,11 +8,17 @@ const Tab = createMaterialTopTabNavigator();
 
 const Tabbartop = () => {
   return (
-    <Tab.Navigator>
-    <Tab.Screen name="DownloadScreen2" component={DownloadScreen2} />
-    <Tab.Screen name="WatchlistScreen" component={WatchlistScreen} />
-  </Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: 'red',
+        tabBarLabelStyle: { fontSize: 15 },
+        tabBarStyle: { backgroundColor: 'black' },
+      }}
+    >
+      <Tab.Screen name="Download" component={DownloadScreen2} />
+      <Tab.Screen name="Watchlist" component={WatchlistScreen} />
+    </Tab.Navigator>
   )
 }
 
-export default Tabbartop
+export default Tabbartop;

@@ -1,6 +1,8 @@
 import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import downloadcss from './downloadcss';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const Download2 = ({ navigation }: any) => {
     const DATA = [
@@ -22,25 +24,30 @@ const Download2 = ({ navigation }: any) => {
                         <Text style={downloadcss.text1}>{item.text}</Text>
 
                         <View style={downloadcss.view1}>
-                       <View>
-                       <View style={downloadcss.view2}></View>
-                            <View style={downloadcss.view4}>
-                                <Text style={downloadcss.text2}>0% Watched</Text>
+                            <View>
+                                <View style={downloadcss.view2}></View>
+                                <View style={downloadcss.view4}>
+                                    <Text style={downloadcss.text2}>0% Watched</Text>
+                                </View>
                             </View>
-                       </View>
-                       <View>
-                        <Text style={downloadcss.text3}>{item.strong}</Text>
-                       </View>
+                            <View style={downloadcss.view5}>
+                                <Text style={downloadcss.text3}>{item.strong}</Text>
+                            </View>
                         </View>
                     </View>
-
+                    <TouchableOpacity style={downloadcss.deletview}>
+                        <FontAwesomeIcon
+                            icon={faTrash}
+                            style={downloadcss.icon1}
+                            size={18}
+                        />
+                    </TouchableOpacity>
                 </View>
             </View>
         )
     }
     return (
         <View style={{ backgroundColor: 'black', flex: 1 }}>
-            <Text>Download2</Text>
             <FlatList
                 data={DATA}
                 renderItem={render1}
