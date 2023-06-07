@@ -22,11 +22,11 @@ const App = () => {
     //     <Stack.Screen name="PlansScreen" component={PlansScreen}/> */}
     //     {/* <Stack.Screen name="ProfileScreen" component={ProfileScreen}/> */}
     //     {/* <Stack.Screen name="HomeScreen" component={HomeScreen}/> */}
-    //     {/* <Stack.Screen name="Tabbar" component={Tabbar}/> */}
+        // {/* <Stack.Screen name="Tabbar" component={Tabbar}/> */}
     //   </Stack.Navigator>
     // </NavigationContainer>
     <View>
-      {/* <SoundRecording></SoundRecording> */}
+      <SoundRecording></SoundRecording>
       {/* <Text>sjdhujkds</Text> */}
     </View>
   )
