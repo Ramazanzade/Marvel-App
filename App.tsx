@@ -26,7 +26,7 @@ const App = () => {
     //   </Stack.Navigator>
     // </NavigationContainer>
     <View>
-      {/* <SoundRecording></SoundRecording> */}
+      <SoundRecording></SoundRecording>
       {/* <Text>sjdhujkds</Text> */}
     </View>
   )
