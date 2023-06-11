@@ -27,7 +27,7 @@ const App = () => {
     // </NavigationContainer>
     <View>
       <SoundRecording></SoundRecording>
-      <Text>sjdhujkds</Text>
+      {/* <Text>sjdhujkds</Text> */}
     </View>
   )
 }
