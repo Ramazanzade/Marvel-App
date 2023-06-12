@@ -14,21 +14,18 @@ const Stack = createNativeStackNavigator();
 const App = () => {
 
   return (
-    // <NavigationContainer>
-    //   <Stack.Navigator screenOptions={{headerShown:false}}>
-    //   {/* <Stack.Screen name="SplashScreen" component={SplashScreen}/> */}
-    //     {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen}/>
-    //     <Stack.Screen name="LoginRegisterScreen" component={LoginRegisterScreen}/>
-    //     <Stack.Screen name="PlansScreen" component={PlansScreen}/> */}
-    //     {/* <Stack.Screen name="ProfileScreen" component={ProfileScreen}/> */}
-    //     {/* <Stack.Screen name="HomeScreen" component={HomeScreen}/> */}
-        // {/* <Stack.Screen name="Tabbar" component={Tabbar}/> */}
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-    <View>
-      <SoundRecording></SoundRecording>
-      {/* <Text>sjdhujkds</Text> */}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown:false}}>
+      {/* <Stack.Screen name="SplashScreen" component={SplashScreen}/> */}
+        {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen}/>
+        <Stack.Screen name="LoginRegisterScreen" component={LoginRegisterScreen}/>
+        <Stack.Screen name="PlansScreen" component={PlansScreen}/> */}
+        {/* <Stack.Screen name="ProfileScreen" component={ProfileScreen}/> */}
+        {/* <Stack.Screen name="HomeScreen" component={HomeScreen}/> */}
+        <Stack.Screen name="Tabbar" component={Tabbar}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+   
   )
 }
 export default App
