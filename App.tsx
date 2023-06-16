@@ -9,18 +9,17 @@ import LoginRegisterScreen from './src/navigation/Stack/Login-RegisterStack/Logi
 import PlansScreen from './src/navigation/Stack/PlansStack/PlansScreen';
 import ProfileScreen from './src/navigation/Stack/ProfileStack/ProfileScreen';
 import Tabbar from './src/navigation/Tab/Tabbar';
-import SoundRecording from './src/SoundRecording/RecordAndSendSound';
 const Stack = createNativeStackNavigator();
 const App = () => {
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:false}}>
-      {/* <Stack.Screen name="SplashScreen" component={SplashScreen}/> */}
-        {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen}/>
+      <Stack.Screen name="SplashScreen" component={SplashScreen}/> 
+        <Stack.Screen name="OnboardingScreen" component={OnboardingScreen}/>
         <Stack.Screen name="LoginRegisterScreen" component={LoginRegisterScreen}/>
-        <Stack.Screen name="PlansScreen" component={PlansScreen}/> */}
-        {/* <Stack.Screen name="ProfileScreen" component={ProfileScreen}/> */}
+        <Stack.Screen name="PlansScreen" component={PlansScreen}/>
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
         {/* <Stack.Screen name="HomeScreen" component={HomeScreen}/> */}
         <Stack.Screen name="Tabbar" component={Tabbar}/>
       </Stack.Navigator>

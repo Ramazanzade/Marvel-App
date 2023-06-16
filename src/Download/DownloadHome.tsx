@@ -1,7 +1,7 @@
 import { View, Text , Image } from 'react-native'
 import React from 'react'
 import downloadcss from './downloadcss'
-import Tabbartop from '../navigation/Tab/Tabbartop'
+import TabbartopDownload from '../navigation/Tab/TabbartopDownload'
 
 const DownloadHome = () => {
   return (
@@ -12,7 +12,7 @@ style={downloadcss.img}
   source={require('../asset/imge/2.png')}
 />
 </View>
-<Tabbartop></Tabbartop>
+<TabbartopDownload></TabbartopDownload>
     </View>
     
   )

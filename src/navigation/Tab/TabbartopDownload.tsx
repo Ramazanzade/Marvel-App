@@ -6,19 +6,19 @@ import WatchlistScreen from '../Stack/WatchlistStack/WatchlistScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
-const Tabbartop = () => {
+const TabbartopDownload = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: 'red',
+        tabBarActiveTintColor: 'gray',
         tabBarLabelStyle: { fontSize: 15 },
         tabBarStyle: { backgroundColor: 'black' },
       }}
     >
-      <Tab.Screen name="Download" component={DownloadScreen2} />
-      <Tab.Screen name="Watchlist" component={WatchlistScreen} />
+      <Tab.Screen name="Download"  component={DownloadScreen2} />
+      <Tab.Screen name="Watchlist"  component={WatchlistScreen} />
     </Tab.Navigator>
   )
 }
 
-export default Tabbartop;
+export default TabbartopDownload;

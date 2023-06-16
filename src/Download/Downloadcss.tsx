@@ -23,7 +23,7 @@ export default StyleSheet.create({
         marginLeft: '4%',
         height: 120,
         // marginBottom: '5%',
-        marginTop:'8%'
+        marginTop: '8%'
     },
     view: {
         flexDirection: 'row',
@@ -40,7 +40,7 @@ export default StyleSheet.create({
     view1: {
         marginTop: '7%',
         flexDirection: 'row',
-        justifyContent:'space-between'
+        justifyContent: 'space-between'
     },
     view2: {
         backgroundColor: 'red',
@@ -58,20 +58,32 @@ export default StyleSheet.create({
     text3: {
         color: '#FFFFFF'
     },
-    view5:{
-        marginLeft:'25%'
+    view5: {
+        marginLeft: '25%'
     },
-    icon1:{
-alignSelf:'center',
-marginTop:'20%'
+    icon1: {
+        alignSelf: 'center',
+        marginTop: '20%'
     },
-    deletview:{
-width:30,
-height:30,
-borderRadius:8,
-backgroundColor:'rgba(237, 27, 36, 0.5)',
-alignSelf:'flex-end',
-marginBottom:10,
+    deletview: {
+        width: 30,
+        height: 30,
+        borderRadius: 8,
+        backgroundColor: 'rgba(237, 27, 36, 0.5)',
+        alignSelf: 'flex-end',
+        marginBottom: 10,
+    },
+    movieimg1: {
+        width: 120,
+        height: 170,
+    },
+    imgview1: {
+        // marginHorizontal:15,
+        margin: "4%",
+
+    },
+    imgview2: {
+        margin: 5
     }
 
 
