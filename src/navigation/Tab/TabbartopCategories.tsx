@@ -12,7 +12,6 @@ const TabbartopCategories = () => {
         tabBarActiveTintColor: 'gray',
         tabBarLabelStyle: { fontSize: 15 },
         tabBarStyle: { backgroundColor: 'black' },
-        // tabBarScrollEnabled:true
       }}
     >
       <Tab.Screen name="MovieScreen"  component={MovieScreen} />

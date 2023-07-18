@@ -2,10 +2,13 @@ import { View, Text, Image, TouchableOpacity, Button } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import planscss from './planscss'
 const DEFAULT_DELAY = 100;
+const DEFAULT_DELAY1 = 5000;
 
 const PlansPage4 = ({ navigation }: any) => {
   const [backgroundColors, setBackgroundColors] = useState(['', '', ' ']);
   const [cevreColor, setCevreColor] = useState('#700806');
+  const [loading , setLoading] = useState(false)
+
   const handleTouch = (index: any) => {
     const updatedBackgroundColors = backgroundColors.map((color, i) => {
       if (i === index) {
@@ -20,13 +23,21 @@ const PlansPage4 = ({ navigation }: any) => {
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % 6); // 6 is the total number of circles
-    }, DEFAULT_DELAY);    
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % 6);
+    }, DEFAULT_DELAY);
+
     return () => clearInterval(intervalId);
   }, []);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      navigation.navigate('PlansPage5');
+    }, DEFAULT_DELAY1);
+
+    return () => clearTimeout(timeoutId);
+  }, [navigation]);
 
  
   return (
@@ -69,11 +80,6 @@ const PlansPage4 = ({ navigation }: any) => {
         />
       ))}
     </View>
-      <View style={planscss.buton}>
-        <TouchableOpacity style={[planscss.touc, { marginTop: "50%" }]} onPress={() => navigation.navigate('PlansPage5')}>
-          <Text style={planscss.text5}> Continue </Text>
-        </TouchableOpacity>
-      </View>
     </View >
   )
 }

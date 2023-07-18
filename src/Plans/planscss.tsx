@@ -130,7 +130,7 @@ export default StyleSheet.create({
         backgroundColor: '#FFFFFF',
         width: '92%',
         marginLeft: '4%',
-        marginTop: '5%',
+        marginTop: '3%',
         padding: '4%',
         textAlign: 'left',
         paddingLeft: '3%',
@@ -171,5 +171,9 @@ marginTop:'15%'
     icon4:{
 alignSelf:'center',
 marginTop:'15%'
+    },
+    errorInput:{
+        borderColor:'red',
+        borderWidth:2
     }
 })

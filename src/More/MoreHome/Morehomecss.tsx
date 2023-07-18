@@ -6,6 +6,7 @@ export default StyleSheet.create({
     },
     view1: {
         marginHorizontal: "7%",    
+        marginTop:'20%'
     },
     touc: {
         flexDirection: 'row',

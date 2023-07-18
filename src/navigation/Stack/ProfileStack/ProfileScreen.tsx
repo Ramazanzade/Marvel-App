@@ -13,7 +13,7 @@ const ProfileScreen = () => {
     <Stack.Screen name="ProfilePage1" component={ProfilePage1} />
     <Stack.Screen name="ProfilPage2" component={ProfilPage2} />
     <Stack.Screen name="ProfilePage3" component={ProfilePage3} />
-    <Stack.Screen name="ProfilePage4" component={ProfilePage4} />
+    {/* <Stack.Screen name="ProfilePage4" component={ProfilePage4} /> */}
     <Stack.Screen name="ProfilePage5" component={ProfilePage5} />
 </Stack.Navigator>
   )

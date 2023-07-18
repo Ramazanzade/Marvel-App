@@ -46,7 +46,7 @@ const ProfilePage1 = ({navigation}:any) => {
           require('../asset/imge/avatar5.jpg'),
           require('../asset/imge/avatar6.jpg'),
           require('../asset/imge/avatar7.jpg'),
-          require('../asset/imge/avatar8.jpg'),
+          require('../asset/imge/avatar4.jpg'),
         ].map(renderAvatar)}
       </View>
            <View style={profilecss.buton}>

@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import profilecss from './profilecss'
 
 const ProfilePage5 = ({ navigation, route, index }: any) => {
-    const { selectedAvatarImage } = route.params;
-    const [username, setusername] = useState('')
+    const { selectedAvatarImage , username } = route.params;
+    const [username1, setusername] = useState('')
 
     return (
         <View style={profilecss.container}>
@@ -29,14 +29,19 @@ const ProfilePage5 = ({ navigation, route, index }: any) => {
                 />
                </View>
             <View style={profilecss.usernameview1}>
-                <Text style={profilecss.username1}>{username}:nsjada</Text>
+                <Text style={profilecss.username1}>{username}</Text>
             </View>
             <View style={profilecss.buton}>
-                <TouchableOpacity style={[profilecss.touc, { marginTop: '20%' }]} onPress={() => navigation.navigate('HomeScreen', {
-                    selectedAvatarImage: selectedAvatarImage,
-                    selectedAvatarIndex: index,
-                    username: username
-                })}>
+                <TouchableOpacity style={[profilecss.touc, { marginTop: '20%' }]}   onPress={() =>
+                        navigation.navigate('Tabbar', {
+                            screen: 'MoreScreen', 
+                            params: {
+                                selectedAvatarImage: selectedAvatarImage,
+                                selectedAvatarIndex: index,
+                                username: username
+                            }
+                        })
+                    }>
                     <Text style={profilecss.text5}>Eat Your Green Vegitables</Text>
                 </TouchableOpacity>
             </View>

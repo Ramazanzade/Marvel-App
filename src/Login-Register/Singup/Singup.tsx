@@ -4,6 +4,8 @@ import singupcss from './singupcss'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios'
+
 const Singup = ({ navigation }: any) => {
     const [email, setemail] = useState<any>('')
     const [password, setpassword] = useState<any>('')
@@ -34,15 +36,28 @@ const Singup = ({ navigation }: any) => {
         }
     }
 
-    const Singup = () => {
-        console.log('ahjs');
-        
-        errors()
-        setIsLoading(true);
-        setTimeout(() => {
+    const Singup = async () => {
+console.log('nsajnas');
+
+        try {
+   
+            const response = await axios.post('https://marvel-backend2.onrender.com/api/user/create-user',
+            {
+              email,
+              password
+            });
+            console.log(response.data);
+            navigation.navigate('PlansScreen', { screen: 'PalnsPage1' })
+
+          } catch (error:any) {
+            console.log("error",error);
+            navigation.navigate('Singin')
+          } 
+          errors()
+          setIsLoading(true);
+          setTimeout(() => {
             setIsLoading(false);
-        }, 3000);
-        navigation.navigate('PlansScreen', { screen: 'PalnsPage1' })
+          }, 1000);
         
     }
     const login = () => {

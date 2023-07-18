@@ -43,7 +43,6 @@ const ProfilePage4 = ({ navigation, route , index }: any) => {
                 screen: 'Home',
                 params: {}
             })
-            // navigation.navigate("Singup")
 
         }
     }

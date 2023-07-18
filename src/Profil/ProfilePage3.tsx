@@ -42,7 +42,7 @@ const ProfilePage3 = ({ navigation, route , index}: any) => {
                 />
             </View>
             <View style={profilecss.buton}>
-                <TouchableOpacity style={[profilecss.touc, { marginTop: '40%' }]} onPress={() => navigation.navigate('ProfilePage4',{ selectedAvatarImage: selectedAvatarImage,
+                <TouchableOpacity style={[profilecss.touc, { marginTop: '40%' }]} onPress={() => navigation.navigate('ProfilePage5',{ selectedAvatarImage: selectedAvatarImage,
       selectedAvatarIndex: index,
       username:username
     } )}>

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import singupcss from '../Singup/singupcss'
+import axios from 'axios'
 
 const Login = ({navigation}:any) => {
   const [email, setemail] = useState<any>('')
@@ -25,7 +26,43 @@ const Login = ({navigation}:any) => {
       setemail(text);
       setemailerror(text.trim() === '' || !/\S+@\S+\.\S+/.test(text))
   };
-
+//   const handleFacebookLogin = (LoginManager:any) => {
+//     LoginManager.logInWithPermissions(['public_profile', 'email']).then(
+//       (result:any) => {
+//         if (result.isCancelled) {
+//           console.log('Facebook login is cancelled');
+//         } else {
+//           AccessToken.getCurrentAccessToken().then((data:any) => {
+//             const accessToken = data.accessToken.toString();
+//             const graphRequestParams = {
+//               parameters: {
+//                 fields: {
+//                   string: 'id,name,email,picture.type(large)',
+//                 },
+//               },
+//             };
+//             const graphRequest = new GraphRequest(
+//               '/me',
+//               { accessToken, ...graphRequestParams },
+//               (error:any, fbUser:any) => {
+//                 if (error) {
+//                   console.log('Error fetching Facebook user data:', error);
+//                 } else {
+//                   console.log('Facebook user:', fbUser);
+//                   // Perform any additional actions with the user data
+//                 }
+//               }
+//             );
+//             new GraphRequestManager().addRequest(graphRequest).start();
+//           });
+//         }
+//       },
+//       (error:any) => {
+//         console.log('Facebook login error:', error);
+//       }
+//     );
+//   };
+  
 
   const errors = () => {
       if (emailerror == email || passworderror == password) {
@@ -35,14 +72,37 @@ const Login = ({navigation}:any) => {
       }
   }
 
-  const Login = () => {
-      errors()
-      setIsLoading(true);
-      setTimeout(() => {
-          setIsLoading(false);
-      }, 3000);
-      navigation.navigate('LoginRegisterScreen', { screen: 'Singup' })
-
+  const Login = async () => {
+    if (!email || !password) {
+        throw new Error('Please provide name, fin, and email');
+          }
+  
+  
+      try {
+        const response = await axios.post(
+          'https://marvel-backend2.onrender.com/api/user/sign-in',
+          {
+            
+            email,
+            password
+          });
+          setemail('')
+          setpassword('')
+        console.log(response.data.user);
+        if ( emailerror == email || passworderror == password ) {
+            setpassworderror(true)
+            setemailerror(true)
+          } else {}
+          setIsLoading(true);
+          setTimeout(() => {
+           setIsLoading(false);
+         }, 3000);
+         navigation.navigate('PlansScreen', { screen: 'PalnsPage1' })
+        
+      } catch (error:any) {
+        console.error(error);
+      }
+  
   }
 const Singup = ()=>{
   navigation.navigate('Singup')
@@ -82,7 +142,7 @@ const Singup = ()=>{
               </View>
               <TouchableOpacity
                   style={singupcss.touc}
-                  onPress={() => Login}>
+                  onPress={() => Login()}>
                   <Text style={singupcss.text}>
                       Login
                   </Text>
@@ -93,7 +153,7 @@ const Singup = ()=>{
               <Text style={singupcss.text1}> Continue With </Text>
           </View>
           <View style={singupcss.touchview}>
-              <TouchableOpacity style={singupcss.toucicon}>
+              <TouchableOpacity style={singupcss.toucicon} >
                   <FontAwesomeIcon
                       icon={faFacebook}
                       style={singupcss.icon}
